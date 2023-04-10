@@ -70,83 +70,122 @@ sample=pd.DataFrame({"Brand":[brand],"OS":[operating_system], "Processor":[proce
 #Convert these values to suitable integer form
 #Function to change brand to number
 def replace_brand(brand):
-    match(brand):
-        case'Lenovo'   : return 1
-        case'ASUS'     : return 2
-        case'HP'       : return 3
-        case'DELL'     : return 4
-        case'RedmiBook': return 5
-        case'realme'   : return 6
-        case'acer'     : return 7
-        case'MSI'      : return 8
-        case'APPLE'    : return 9
-        case'Infinix'  : return 10
-        case'SAMSUNG'  : return 11
-        case'Ultimus'  : return 12
-        case'Vaio'     : return 13
-        case'GIGABYTE' : return 14
-        case'Nokia'    : return 15
-        case'ALIENWARE': return 16  
+    if brand=='Lenovo':
+        return 1
+    elif brand=='ASUS':
+        return 2
+    elif brand=='HP':
+        return 3
+    elif brand=='DELL':
+        return 4
+    elif brand=='RedmiBook':
+        return 5
+    elif brand=='realme':
+        return 6
+    elif brand=='acer':
+        return 7
+    elif brand=='MSI':
+        return 8
+    elif brand=='APPLE':
+        return 9
+    elif brand=='Infinix':
+        return 10
+    elif brand=='SAMSUNG':
+        return 11
+    elif brand=='Ultimus':
+        return 12
+    elif brand=='Vaio':
+        return 13
+    elif brand=='GIGABYTE':
+        return 14
+    elif brand=='Nokia':
+        return 15
+    elif brand=='ALIENWARE':
+        return 16    
 data['Brand']=data['Brand'].apply(replace_brand)
 
 #Function to change processor to number
 def replace_processor(Processor):
-    match(Processor):
-        case 'Intel'   : return 1
-        case 'AMD'     : return 2
-        case 'Apple'   : return 3
-        case 'Qualcomm': return 4
+    if Processor=='Intel':
+        return 1
+    elif Processor=='AMD':
+        return 2
+    elif Processor=='Apple':
+        return 3
+    elif Processor=='Qualcomm':
+        return 4
 data['Processor']=data['Processor'].apply(replace_processor)
 
 #Function to change os to number
 def replace_os(os):
-    match(os):
-        case 'Windows 11': return 1
-        case 'Windows 10': return 2
-        case 'Mac'       : return 3
-        case 'Chrome'    : return 4
-        case 'DOS'       : return 5
+    if os=='Windows 11':
+        return 1
+    elif os=='Windows 10':
+        return 2
+    elif os=='Mac':
+        return 3
+    elif os=='Chrome':
+        return 4
+    elif os=='DOS':
+        return 5
 data['OS']=data['OS'].apply(replace_os)
 
 #Function to change ram type to number
 def replace_ram_type(ram_type):
-    match(ram_type):
-        case'DDR4'   : return 1
-        case'DDR5'   : return 2
-        case'LPDDR4' : return 3
-        case'Unified': return 4
-        case'LPDDR4X': return 5
-        case'LPDDR5' : return 6
-        case'LPDDR3' : return 7   
+    if ram_type=='DDR4':
+        return 1
+    elif ram_type=='DDR5':
+        return 2
+    elif ram_type=='LPDDR4':
+        return 3
+    elif ram_type=='Unified':
+        return 4
+    elif ram_type=='LPDDR4X':
+        return 5
+    elif ram_type=='LPDDR5':
+        return 6
+    elif ram_type=='LPDDR3':
+        return 7      
 data['ramType']=data['ramType'].apply(replace_ram_type)
 
 #Function to change ram size to number
 def replace_ram_size(ram_size):
-    match(ram_size):
-        case '8GB'  : return 1
-        case '16GB' : return 2
-        case '4GB'  : return 3
-        case '32GB' : return 4
+    if ram_size=='8GB':
+        return 1
+    elif ram_size=='16GB':
+        return 2
+    elif ram_size=='4GB':
+        return 3
+    elif ram_size=='32GB':
+        return 4
 data['ramSize']=data['ramSize'].apply(replace_ram_size)
 
 #Function to disk type to number
 def replace_disk_type(disk_type):
-    match(disk_type):
-        case 'SSD' : return 1
-        case 'HDD' : return 2
-        case 'EMMC': return 3
+    if disk_type=='SSD':
+        return 1
+    elif disk_type=='HDD':
+        return 2
+    elif disk_type=='EMMC':
+        return 3
 data['diskType']=data['diskType'].apply(replace_disk_type)
 
 #Function to change disk size to number
 def replace_disk_size(disk_size):
-    match(disk_size):
-        case'256GB': return 1
-        case'512GB': return 2
-        case'1TB'  : return 3
-        case'128GB': return 4
-        case'64GB' : return 5
-        case'32GB' : return 6
-        case'2TB'  : return 7
+    if disk_size=='256GB':
+        return 1
+    elif disk_size=='512GB':
+        return 2
+    elif disk_size=='1TB':
+        return 3
+    elif disk_size=='128GB':
+        return 4
+    elif disk_size=='64GB':
+        return 5
+    elif disk_size=='32GB':
+        return 6
+    elif disk_size=='2TB':
+        return 7
 data['diskSize']=data['diskSize'].apply(replace_disk_size)
 
 #Split data into X and y
